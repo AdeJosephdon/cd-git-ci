@@ -7,8 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint src --ext .js,.jsx,.ts,.tsx --report-unused-disable-directives --max-warnings=0",
-      "lint:fix": "eslint src --ext .js,.jsx --fix",
-      "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,json,css,scss,html,md}'",
+    "lint:fix": "eslint src --ext .js,.jsx --fix",
+    "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,json,css,scss,html,md}'",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -16,6 +16,8 @@
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
     "@eslint/js": "^9.22.0",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
@@ -42,7 +44,7 @@
     "src/**/*.{ts, tsx, js, jsx}": [
       "npm run lint",
       "npm run format",
-      "eslint --fix", 
+      "eslint --fix",
       "prettier --write"
     ]
   }
