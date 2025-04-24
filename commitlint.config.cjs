@@ -1,6 +1,7 @@
-import config from '@commitlint/config-conventional';
+// commitlint.config.cjs
+const config = require('@commitlint/config-conventional');
 
-export default {
+module.exports = {
   ...config,
   rules: {
     'header-min-length': [2, 'always', 20],
