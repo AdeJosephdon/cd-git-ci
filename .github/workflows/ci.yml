@@ -45,7 +45,7 @@ jobs:
         run: npm run format
 
       - name: Lint commit message
-        uses: wagoid/commitlint-github-action@v4
+        uses: wagoid/commitlint-github-action@v3
         with:
           configFile: ./commitlint.config.cjs
           firstParent: true
