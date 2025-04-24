@@ -1,28 +1,13 @@
-const { rules } = require('eslint-plugin-react-refresh');
-
 module.exports = {
-  extends: [],
+  extends: ['@commitlint/config-conventional'],
   rules: {
+    // Require subject (header) to be at least 20 characters
     'header-min-length': [2, 'always', 20],
-    'header-case-start-capital': [2, 'always'],
-    'header-end-period': [2, 'never'],
+
+    // Enforce capitalized start
+    'header-case': [2, 'always', 'sentence-case'],
+
+    // Disallow ending with period
+    'header-full-stop': [2, 'never', '.'],
   },
-  plugins: [
-    {
-      rules: {
-        'header-case-start-capital': ({ raw }) => {
-          return [
-            /^[A-Z]/.test(raw),
-            'Commit message must start with a capital letter',
-          ];
-        },
-        'header-end-period': ({ header }) => {
-          return [
-            /\.$/.test(header),
-            'Commit message must not end with a period',
-          ];
-        },
-      },
-    },
-  ],
 };
