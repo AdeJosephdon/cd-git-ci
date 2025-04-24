@@ -44,7 +44,9 @@ jobs:
       - name: Run formatters
         run: npm run format
 
-      - name: Check commit messages
-        uses: wagoid/commitlint-github-action@v4.0.0
+      - name: Lint commit message
+        uses: wagoid/commitlint-github-action@v4
         with:
-          config-file: commitlint.config.cjs
+          configFile: ./commitlint.config.js
+          firstParent: true
+          failOnWarnings: false
