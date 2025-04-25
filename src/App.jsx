@@ -21,7 +21,7 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
-        {/* Just adding pre-commit */}
+        {/* Just adding pre-commit. I do not think it worked. */}
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR..
         </p>
