@@ -36,13 +36,9 @@
     "vite": "^6.3.1"
   },
   "simple-git-hooks": {
-    "commit-msg": "npx --no -- commitlint --edit"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "npm run lint && npm run format"
-    }
+    "commit-msg": "npx --no -- commitlint --edit",
+    "pre-commit": "npx lint-staged",
+    "pre-push": "npm run lint && npm run format"
   },
   "lint-staged": {
     "src/**/*.{ts, tsx, js, jsx}": [
